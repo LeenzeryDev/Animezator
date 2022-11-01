@@ -2,7 +2,6 @@
 using Avalonia.Interactivity;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Net;
 using System.Text.Json;
 using NetCoreAudio;
 
@@ -38,10 +37,8 @@ namespace Animezator
                 var response = await client.PostAsync(url, data);
                 string resp_result = response.Content.ReadAsStringAsync().Result;
                 TTS_Result tts = JsonSerializer.Deserialize<TTS_Result>(resp_result);
-                var webclient = new WebClient();
-                webclient.DownloadFile(tts.file, "tts.mp3");
                 var player = new Player();
-                player.Play("tts.mp3").Wait();
+                player.Play(tts.file).Wait();
             }
          }
      }
