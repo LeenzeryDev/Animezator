@@ -1,0 +1,18 @@
+<Window CanResize="False" xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="250"
+        Width="600" Height="250"
+        x:Class="Animezator.MainWindow"
+        Title="Animezator">
+  <StackPanel Margin="10">
+    <TextBox Name="word" AcceptsReturn="True" TextWrapping="Wrap" Watermark="компилятор сломался"/>
+    <TextBox Margin="0,10,0,0" Name="result" AcceptsReturn="True" TextWrapping="Wrap" Watermark="компирятор сромарся"/>
+    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
+      <Button HorizontalAlignment="Left" Width="160" Click="Animezator">Преобразовать</Button>
+      <Button Margin="10" HorizontalAlignment="Right" Width="160" Click="tts">Озвучить</Button>
+    </StackPanel>  
+  </StackPanel>
+  
+</Window>
